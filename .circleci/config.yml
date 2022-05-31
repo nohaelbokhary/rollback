@@ -30,7 +30,9 @@ jobs:
                 --region us-east-1
   smoke_test:
     docker:
-      - image: alpine:latest
+    # - image: alpine:latest
+       - image: amazon/aws-cli 
+     
   
     steps:
       - run: apk add --update curl
