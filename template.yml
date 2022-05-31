@@ -8,7 +8,7 @@ Resources:
       SecurityGroupIds:
         - !GetAtt 'InstanceSecurityGroup.GroupId'
       # Change this, as applicable to you      
-      KeyName: circleci_infrastructre
+      KeyName: rollback
       # Change this, as applicable to you
       # You may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
       ImageId: 'ami-0c4f7023847b90238'
@@ -17,7 +17,7 @@ Resources:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       GroupDescription: Enable SSH access via port 22
-      VpcId: vpc-0b6256771e3a4cb10
+      VpcId: vpc-0a54f9fb1543a8983
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '22'
