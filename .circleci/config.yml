@@ -38,6 +38,9 @@ jobs:
       - add_ssh_keys:
             fingerprints: ["f9:b5:94:9a:a0:6e:59:d3:97:1c:b6:4c:a0:3c:ec:8a"] 
       - run:
+          name: Install awscli
+          command: sudo pip install awscli      
+      - run:
           name: smoke test
           command: |
             URL="https://www.google.com/"
