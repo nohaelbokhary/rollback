@@ -47,9 +47,9 @@ jobs:
               return 0
             else
               return 1
-              - destroy_environment
+              
             fi
-             
+        - destroy_environment         
 # Sequential workflow
 workflows:
   # Name the workflow
